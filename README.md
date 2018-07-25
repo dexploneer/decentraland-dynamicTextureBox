@@ -4,6 +4,35 @@ The box is rotatable and scalable like a normal box. The example scene shows its
 
 ```src/DynamicBox.tsx```
 
+the component its plug and play. you just have to import it into your scene and include it in the render function
+
+```import { DynamicBox } from 'src/DynamicBox'```
+```
+<DynamicBox 
+        position={{ 
+            x: this.state.posX, 
+            y: this.state.posY, 
+            z: this.state.posZ 
+        }}
+        scale={{
+            x: this.state.scaleX,
+            y: this.state.scaleY,
+            z: this.state.scaleZ
+        }} 
+        rotation={{
+            x: this.state.rotationX,
+            y: this.state.rotationY,
+            z: this.state.rotationZ
+        }}
+        frontTexture={this.state.frontTexture}
+        backTexture={this.state.backTexture}
+        leftTexture={this.state.leftTexture}
+        rightTexture={this.state.rightTexture}
+        upTexture={this.state.upTexture}
+        downTexture={this.state.downTexture}
+/>
+```
+
 You can learn more about our JSX-style lifecycle and rendering in our documentation: https://docs.decentraland.org/
 
 Install the CLI
